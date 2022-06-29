@@ -37,3 +37,12 @@ Therefore, we are implementing this E-commerce website in order to fulfil the de
 - Provide a medium for safe shopping during pandemic
 - Promote local shops and vendors whose business is affected by the pandemic
 - Promote people to start business at their homes like bakery and handicrafts
+
+## Group Description
+Group Number 23
+### Members, Enrollment Number
+- Chinayush Waman Wasnik, 20114027
+- Nikhil, 20114063
+- Pranjal Singh, 20114074
+- Priyansh Bhandari, 20111032
+- Puneet Gupta, 20114078
