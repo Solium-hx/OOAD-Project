@@ -1,0 +1,93 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block slideshow %}
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/ccc.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/m1.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/grc.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/mskkk.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{% endblock slideshow %}
+
+
+
+{% block main-content %}
+<div class="m-3">
+    <h2>Covid Medicines</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Covid_Medicines %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+    <h2>Mobiles</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Mobiles %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>Laptops</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Laptop %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>Jeans</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Jeans %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>TopWear</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Topwears %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>Mask</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Mask %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>Sanitizer</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Sanitizer %}
+  <a href="{% url 'product-detail'  b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+     <h2>Grocery</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Grocerys %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+    <h2>Kitchen Essentials</h2>
+ <div class="owl-carousel" id="slider1">
+     {% for b in Kitchen_Essentials %}
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src={{b.product_image.url}} alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs {{b.discounted_price}}</span></div></a>
+     {% endfor %}
+ </div>
+</div>
+
+{% endblock main-content %}
+

@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Grocery{% endblock title %}
+{% block main-content %}
+
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="list-group">
+    <a href="{% url 'Grocery' %}" class="list-group-item list-group-item-action active" aria-current="true">
+    All Grocery</a>
+       <a href="{% url 'Grocerydata' 'Fruits' %}" class="list-group-item list-group-item-action" arial-current="true">Fruits</a>
+       <a href="{% url 'Grocerydata' 'Vegetables' %}" class="list-group-item list-group-item-action" arial-current="true">Vegetables</a>
+       <a href="{% url 'Grocerydata' 'Amul' %}" class="list-group-item list-group-item-action" arial-current="true">Amul</a>
+       <a href="{% url 'Grocerydata' 'Complan' %}" class="list-group-item list-group-item-action" arial-current="true">Complan</a>
+       <a href="{% url 'Grocerydata' 'Haldirams' %}" class="list-group-item list-group-item-action" arial-current="true">Haldiram</a>
+    </div>
+  </div>
+  <div class="col-sm-8 ">
+   <div class="row">
+    {% for product in Grocerys %}
+     <div class="col-sm-4 text-center mb-4">
+       <a href="{% url 'product-detail' product.id %}" class="btn">
+        <div class = "item">
+          <img src="{{product.product_image.url}}" alt="" height="250" width = "280" class="">
+          <div class="fw-bold">{{product.title}}</div>
+          <div class="fw-bold">Rs. {{product.discounted_price}}
+          <small class="fw-light text-decoration-line-through">{{product.selling_price}}</small></div>
+        </div>
+      </a>
+     </div>
+    {% endfor %}
+   </div>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}

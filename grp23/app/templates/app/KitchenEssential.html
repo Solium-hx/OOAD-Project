@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Kitchen-Essential{% endblock title %}
+{% block main-content %}
+
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="list-group">
+    <a href="{% url 'KitchenEssential' %}" class="list-group-item list-group-item-action active" aria-current="true">
+    All Kitchen Essentials</a>
+        <a href="{% url 'KitchenEssentialdata' 'Sunflame' %}" class="list-group-item list-group-item-action" arial-current="true">Sunflame</a>
+        <a href="{% url 'KitchenEssentialdata' 'Bajaj' %}" class="list-group-item list-group-item-action" arial-current="true">Bajaj</a>
+        <a href="{% url 'KitchenEssentialdata' 'Usha' %}" class="list-group-item list-group-item-action" arial-current="true">Usha</a>
+        <a href="{% url 'KitchenEssentialdata' 'Prestige' %}" class="list-group-item list-group-item-action" arial-current="true">Prestige</a>
+        <a href="{% url 'KitchenEssentialdata' 'below' %}" class="list-group-item list-group-item-action" arial-current="true">Below 1800</a>
+        <a href="{% url 'KitchenEssentialdata' 'above' %}" class="list-group-item list-group-item-action" arial-current="true">Above 1800</a>
+    </div>
+  </div>
+  <div class="col-sm-8 ">
+   <div class="row">
+    {% for product in KitchenEssentials %}
+     <div class="col-sm-4 text-center mb-4">
+       <a href="{% url 'product-detail' product.id %}" class="btn">
+        <div class = "item">
+          <img src="{{product.product_image.url}}" alt="" height="250" width = "280" class="">
+          <div class="fw-bold">{{product.title}}</div>
+          <div class="fw-bold">Rs. {{product.discounted_price}}
+          <small class="fw-light text-decoration-line-through">{{product.selling_price}}</small></div>
+        </div>
+      </a>
+     </div>
+    {% endfor %}
+   </div>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
