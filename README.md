@@ -1,9 +1,9 @@
-# OOAD-Project - E-Commerce Website
+# OOAD-Project - Safen'Secure
 
-This is an E-commerce website which is designed to minimize contact of different people, keeping in mind the situation of pandamic.
+This is an E-commerce website which is designed to minimize contact of different people while they are shoping, keeping in mind the situation of pandamic.
 
 ## Project Discription
-In a pandemic, due to shortage of supply, there may be large crowds in shops leading to voilation of protocols of the pandemic.
+In a pandemic, due to shortage of supply, there may be large crowds in shops leading to violation of protocols of the pandemic.
 In such a situation, the spread of infection can increase exponentially.
 Therefore, we are implementing this E-commerce website in order to fulfil the demand of the people while ensuring all rules are followed.
 
